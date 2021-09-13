@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:speaking_booster/screens/speaking_booster_01.dart';
+import 'package:speaking_booster/screens/vocabulary/vocabulary_home.dart';
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -32,7 +33,9 @@ class _HomePageState extends State<HomePage> {
             ),
             const SizedBox(height: 10.0,),
             RaisedButton(
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>const VocabularyHome()));
+              },
               child:const Text('Vocabulary'),
             )
           ],
