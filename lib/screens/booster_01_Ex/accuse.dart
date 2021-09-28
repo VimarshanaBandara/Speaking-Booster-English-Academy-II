@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:speaking_booster/home_page.dart';
+import 'package:speaking_booster/screens/speaking_booster_01.dart';
 class Accuse extends StatefulWidget {
   const Accuse({Key? key}) : super(key: key);
 
@@ -28,6 +30,20 @@ class _AccuseState extends State<Accuse> {
               )
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+            },
+            icon: Icon(Icons.home),
+          )
+        ],
+        leading:IconButton(
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>SpeakingBooster01()));
+          },
+          icon: Icon(Icons.arrow_back),
+        ) ,
       ),
       body: Container(
           width: MediaQuery.of(context).size.width,
@@ -116,7 +132,7 @@ class _AccuseState extends State<Accuse> {
                     const Divider(),
                     const ListTile(
                       title: Text('ඔබ ඔහුට චෝදනා කරනවාද එන් නැති එක ගැන',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                      subtitle: Text('Do you accuse him for not comming ?',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                      subtitle: Text('Do you accuse him for not coming ?',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                     ),
                     const Divider(),
                     const ListTile(

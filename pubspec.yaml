@@ -29,6 +29,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  google_fonts: ^2.1.0
+  url_launcher: ^6.0.12
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -59,6 +61,100 @@ flutter:
   assets:
      - images/clp1.png
      - images/clp2.png
+     - images/btn1.png
+     - images/btn2.png
+     - images/btn3.png
+     - images/btn4.png
+     - images/btn5.png
+     - images/bg1.jpg
+     - images/btn5.png
+     - images/btn6.png
+     - images/btn7.png
+     - images/bb1.png
+     - images/bb2.png
+     - images/bb3.png
+     - images/bb4.png
+     - images/bb5.png
+     - images/bg2.jpg
+     - images/bb6.png
+     - images/bb7.png
+     - images/bb8.png
+     - images/bb9.png
+     - images/bb10.png
+     - images/bb11.png
+     - images/bb12.png
+     - images/bb13.png
+     - images/bb14.png
+     - images/bb15.png
+     - images/bb16.png
+     - images/bb17.png
+     - images/bb18.png
+     - images/bb19.png
+     - images/bb20.png
+     - images/bb21.png
+     - images/bb22.png
+     - images/bb23.png
+     - images/bb24.png
+     - images/bb25.png
+     - images/bb26.png
+     - images/bb27.png
+     - images/bb28.png
+     - images/bb29.png
+     - images/bb30.png
+     - images/bb31.png
+     - images/bb32.png
+     - images/bb33.png
+     - images/bb34.png
+     - images/bb35.png
+     - images/bb36.png
+     - images/bb37.png
+     - images/bb38.png
+     - images/bb39.png
+     - images/bb40.png
+     - images/bb41.png
+     - images/bb42.png
+     - images/bb43.png
+     - images/bb44.png
+     - images/bb45.png
+     - images/bb46.png
+     - images/bb47.png
+     - images/bb48.png
+     - images/bb49.png
+     - images/w1.png
+     - images/w2.png
+     - images/w3.png
+     - images/w4.png
+     - images/w5.png
+     - images/w6.png
+     - images/w7.png
+     - images/w8.png
+     - images/w9.png
+     - images/w10.png
+     - images/bg3.jpg
+     - images/btn8.png
+     - images/bg4.jpg
+     - images/fbtn1.png
+     - images/fbtn2.png
+     - images/fbtn3.png
+     - images/fbtn4.png
+     - images/fbtn5.png
+     - images/fbtn6.png
+     - images/fbtn7.png
+     - images/fbtn8.png
+     - images/fbtn9.png
+     - images/fbtn10.png
+     - images/fbtn11.png
+     - images/fbtn12.png
+     - images/fbtn13.png
+     - images/fbtn14.png
+     - images/fbtn15.png
+     - images/fbtn16.png
+     - images/fbtn17.png
+     - images/bg5.jpg
+     - images/PlaystoreIcon.jpg
+     - images/logo.jpg
+     - images/sp.jpg
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

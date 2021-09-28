@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:speaking_booster/home_page.dart';
+import 'package:speaking_booster/screens/speaking_booster_01.dart';
 class TiredOf extends StatefulWidget {
   const TiredOf({Key? key}) : super(key: key);
 
@@ -28,6 +30,20 @@ class _TiredOfState extends State<TiredOf> {
               )
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+            },
+            icon: Icon(Icons.home),
+          )
+        ],
+        leading:IconButton(
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>SpeakingBooster01()));
+          },
+          icon: Icon(Icons.arrow_back),
+        ) ,
       ),
       body: Container(
           width: MediaQuery.of(context).size.width,

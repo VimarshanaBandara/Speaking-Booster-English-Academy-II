@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:speaking_booster/home_page.dart';
+import 'package:speaking_booster/screens/speaking_booster_01.dart';
 class Faithful extends StatefulWidget {
   const Faithful({Key? key}) : super(key: key);
 
@@ -28,6 +30,20 @@ class _FaithfulState extends State<Faithful> {
               )
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+            },
+            icon: Icon(Icons.home),
+          )
+        ],
+        leading:IconButton(
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>SpeakingBooster01()));
+          },
+          icon: Icon(Icons.arrow_back),
+        ) ,
       ),
       body: Container(
           width: MediaQuery.of(context).size.width,

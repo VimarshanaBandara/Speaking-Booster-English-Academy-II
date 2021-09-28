@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:speaking_booster/home_page.dart';
+import 'package:speaking_booster/screens/speaking_booster_01.dart';
 class Borrow extends StatefulWidget {
   const Borrow({Key? key}) : super(key: key);
 
@@ -28,6 +30,20 @@ class _BorrowState extends State<Borrow> {
               )
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+            },
+            icon: Icon(Icons.home),
+          )
+        ],
+        leading:IconButton(
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>SpeakingBooster01()));
+          },
+          icon: Icon(Icons.arrow_back),
+        ) ,
       ),
       body: Container(
           width: MediaQuery.of(context).size.width,
@@ -117,6 +133,11 @@ class _BorrowState extends State<Borrow> {
                     const ListTile(
                       title: Text('ඔබ ඇයගෙන් පොතක් ඉල්ලා ගනීවිද ?',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
                       subtitle: Text('Will you borrow the book from her ?',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    ),
+                    const Divider(),
+                    const ListTile(
+                      title: Text('ඔහු මගෙන් කිසිවක් ඉල්ලුවේ නෑ',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                      subtitle: Text('He did\'t borrow anything from me',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                     ),
 
 

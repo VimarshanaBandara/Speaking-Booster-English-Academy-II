@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:speaking_booster/home_page.dart';
+import 'package:speaking_booster/screens/speaking_booster_01.dart';
 class Afraid extends StatefulWidget {
   const Afraid({Key? key}) : super(key: key);
 
@@ -28,6 +30,20 @@ class _AfraidState extends State<Afraid> {
               )
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+            },
+            icon: Icon(Icons.home),
+          )
+        ],
+        leading:IconButton(
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>SpeakingBooster01()));
+          },
+          icon: Icon(Icons.arrow_back),
+        ) ,
       ),
       body: Container(
           width: MediaQuery.of(context).size.width,
@@ -117,6 +133,11 @@ class _AfraidState extends State<Afraid> {
                     const ListTile(
                       title: Text('ඔයා ඔහුට ඇත්ත කියන්න බයවෙලා හිටියා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
                       subtitle: Text('You were afraid of telling him the true.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    ),
+                    const Divider(),
+                    const ListTile(
+                      title: Text('කමල් විදුහල්පතිට බයයි.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                      subtitle: Text('Kamal is afraid of Principal.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                     ),
                     const Divider(),
 

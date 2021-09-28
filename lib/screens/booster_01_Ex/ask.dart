@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:speaking_booster/home_page.dart';
+import 'package:speaking_booster/screens/speaking_booster_01.dart';
 class Ask extends StatefulWidget {
   const Ask({Key? key}) : super(key: key);
 
@@ -28,6 +30,20 @@ class _AskState extends State<Ask> {
               )
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+            },
+            icon: Icon(Icons.home),
+          )
+        ],
+        leading:IconButton(
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>SpeakingBooster01()));
+          },
+          icon: Icon(Icons.arrow_back),
+        ) ,
       ),
       body: Container(
           width: MediaQuery.of(context).size.width,
@@ -117,6 +133,11 @@ class _AskState extends State<Ask> {
                     const ListTile(
                       title: Text('මම කිසිම දෙයක් ඉල්ලුවේ නෑ',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
                       subtitle: Text('I didn\'t ask anything',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    ),
+                    const Divider(),
+                    const ListTile(
+                      title: Text('ඔහු පොතක් ඉල්ලුවාද ?',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                      subtitle: Text('Did he ask for book ?',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                     ),
                     const Divider(),
 

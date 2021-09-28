@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:speaking_booster/home_page.dart';
+import 'package:speaking_booster/screens/speaking_booster_01.dart';
 class MarriedTo extends StatefulWidget {
   const MarriedTo({Key? key}) : super(key: key);
 
@@ -28,6 +30,20 @@ class _MarriedToState extends State<MarriedTo> {
               )
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+            },
+            icon: Icon(Icons.home),
+          )
+        ],
+        leading:IconButton(
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>SpeakingBooster01()));
+          },
+          icon: Icon(Icons.arrow_back),
+        ) ,
       ),
       body: Container(
           width: MediaQuery.of(context).size.width,
@@ -118,6 +134,7 @@ class _MarriedToState extends State<MarriedTo> {
                       title: Text('ඇයව විවාහ කරලා දීලා තියෙන්නේ සොරෙකුට නෙවෙයි.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
                       subtitle: Text('She is not married to a thief',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                     ),
+                    const Divider(),
 
 
                   ],

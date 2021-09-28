@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:speaking_booster/home_page.dart';
+import 'package:speaking_booster/screens/speaking_booster_01.dart';
 class ResponsibleFor extends StatefulWidget {
   const ResponsibleFor({Key? key}) : super(key: key);
 
@@ -28,6 +30,20 @@ class _ResponsibleForState extends State<ResponsibleFor> {
               )
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+            },
+            icon: Icon(Icons.home),
+          )
+        ],
+        leading:IconButton(
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>SpeakingBooster01()));
+          },
+          icon: Icon(Icons.arrow_back),
+        ) ,
       ),
       body: Container(
           width: MediaQuery.of(context).size.width,
@@ -117,6 +133,11 @@ class _ResponsibleForState extends State<ResponsibleFor> {
                     const ListTile(
                       title: Text('නායකයා වග කිව්වා මැච් එක පැරදුන එකට.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
                       subtitle: Text('Captain was responsible for lose the match.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    ),
+                    const Divider(),
+                    const ListTile(
+                      title: Text('ඇය වග කියන්නේ නෑ මේ මුදල් වලට.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                      subtitle: Text('She doesn\'t responsible for this money.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                     ),
 
 

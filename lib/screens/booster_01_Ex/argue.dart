@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:speaking_booster/home_page.dart';
+import 'package:speaking_booster/screens/speaking_booster_01.dart';
 class Argue extends StatefulWidget {
   const Argue({Key? key}) : super(key: key);
 
@@ -28,6 +30,20 @@ class _ArgueState extends State<Argue> {
               )
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+            },
+            icon: Icon(Icons.home),
+          )
+        ],
+        leading:IconButton(
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>SpeakingBooster01()));
+          },
+          icon: Icon(Icons.arrow_back),
+        ) ,
       ),
       body: Container(
           width: MediaQuery.of(context).size.width,
@@ -117,6 +133,11 @@ class _ArgueState extends State<Argue> {
                     const ListTile(
                       title: Text('ඇය වාද කළාද ඔබ සමඟ ඇගේ යාලුවන්ට උදව් කරන එක ගැන ?',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
                       subtitle: Text('Did she argue with you about helping her friends ?',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    ),
+                    const Divider(),
+                    const ListTile(
+                      title: Text('මම කවදාවත් ඇය සමඟ වාද කරන්නේ නෑ මේ ගැටලුව ගැන.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                      subtitle: Text('I never argue with her about this problem',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                     ),
 
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:speaking_booster/home_page.dart';
+import 'package:speaking_booster/screens/splash_screen.dart';
 void main(){
   runApp(const MyApp());
 }
@@ -9,9 +9,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: SplashScreen(),
     );
   }
 }

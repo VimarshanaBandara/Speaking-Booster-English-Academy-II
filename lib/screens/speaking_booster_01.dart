@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:speaking_booster/home_page.dart';
 import 'package:speaking_booster/screens/booster_01_Ex/accuse.dart';
 import 'package:speaking_booster/screens/booster_01_Ex/afraid.dart';
 import 'package:speaking_booster/screens/booster_01_Ex/approve_of.dart';
@@ -19,170 +21,483 @@ import 'package:speaking_booster/screens/booster_01_Ex/no_point_in.dart';
 import 'package:speaking_booster/screens/booster_01_Ex/responsible_for.dart';
 import 'package:speaking_booster/screens/booster_01_Ex/tired_of.dart';
 import 'package:speaking_booster/screens/booster_01_Ex/used_to.dart';
-class SpeakingBooster01 extends StatefulWidget {
+
+
+
+
+class SpeakingBooster01 extends StatelessWidget {
   const SpeakingBooster01({Key? key}) : super(key: key);
 
   @override
-  _SpeakingBooster01State createState() => _SpeakingBooster01State();
-}
-
-class _SpeakingBooster01State extends State<SpeakingBooster01> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Speaking Booster 01'),
-      ),
-      body: Container(
-        width: MediaQuery.of(context).size.width,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              const SizedBox(height: 10.0,),
-              RaisedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Hasto()));
-                },
-                child: const Text('Has to'),
-              ),
-              const SizedBox(height: 10.0,),
-              RaisedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const UsedTo()));
-                },
-                child: const Text('Used to'),
-              ),
-              const SizedBox(height: 10.0,),
-              RaisedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const FeelLike()));
-                },
-                child: const Text('Feel like'),
-              ),
-              const SizedBox(height: 10.0,),
-              RaisedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const NoPointIn()));
-                },
-                child: const Text('No point in'),
-              ),
-              const SizedBox(height: 10.0,),
-              RaisedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const HaveAnIntention()));
-                },
-                child: const Text('I have an intention of'),
-              ),
-              const SizedBox(height: 10.0,),
-              RaisedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Boast()));
-                },
-                child: const Text('Boast to'),
-              ),
-              const SizedBox(height: 10.0,),
-              RaisedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const TiredOf()));
-                },
-                child: const Text('Tired of'),
-              ),
-              const SizedBox(height: 10.0,),
-              RaisedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const MarriedTo()));
-                },
-                child: const Text('Married to'),
-              ),
-              const SizedBox(height: 10.0,),
-              RaisedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Borrow()));
-                },
-                child: const Text('Borrow'),
-              ),
-              const SizedBox(height: 10.0,),
-              RaisedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const InvolveIn()));
-                },
-                child: const Text('Involve in'),
-              ),
-              const SizedBox(height: 10.0,),
-              RaisedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Argue()));
-                },
-                child: const Text('Argue'),
-              ),
-              const SizedBox(height: 10.0,),
-              RaisedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const ResponsibleFor()));
-                },
-                child: const Text('Responsible for'),
-              ),
-              const SizedBox(height: 10.0,),
-              RaisedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const ApproveOf()));
-                },
-                child: const Text('Approve of'),
-              ),
-              const SizedBox(height: 10.0,),
-              RaisedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const GulityOf()));
-                },
-                child: const Text('Gulity of'),
-              ),
-              const SizedBox(height: 10.0,),
-              RaisedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Accuse()));
-                },
-                child: const Text('Accuse'),
-              ),
-              const SizedBox(height: 10.0,),
-              RaisedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Afraid()));
-                },
-                child: const Text('Afarid'),
-              ),
-              const SizedBox(height: 10.0,),
-              RaisedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Faithful()));
-                },
-                child: const Text('Faithful'),
-              ),
-              const SizedBox(height: 10.0,),
-              RaisedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Ask()));
-                },
-                child: const Text('Ask'),
-              ),
-              const SizedBox(height: 10.0,),
-              RaisedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Blame()));
-                },
-                child: const Text('Blame'),
-              ),
-              const SizedBox(height: 10.0,),
-              RaisedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Famous()));
-                },
-                child: const Text('Famous'),
-              ),
-
-            ],
-          ),
+        backgroundColor:  Color(0xFF303F9F),
+        appBar: AppBar(
+          title:  Text('Sentence Patterns 01',style:GoogleFonts.lobster(fontSize: 30.0),),
+          backgroundColor: Color(0xFF303F9F),
+          elevation: 0.0,
+          //centerTitle: true,
+          leading:IconButton(
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+            },
+            icon: Icon(Icons.arrow_back),
+          ) ,
         ),
-      ),
+
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+
+            Expanded(
+                child:  Container(
+                  decoration:  BoxDecoration(
+                      borderRadius: BorderRadius.only(topLeft: Radius.circular(50.0), topRight:Radius.circular(50.0) ),
+
+                      image: DecorationImage(
+                        image: AssetImage('images/bg2.jpg'),
+                        fit: BoxFit.fill, colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.4), BlendMode.dstATop),
+                      )
+                  ),
+                  child: SingleChildScrollView(
+                      child: Column(
+                        children: [
+                          ListTile(
+                            onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=>const Accuse()));},
+                            title: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+
+                                  width:MediaQuery.of(context).size.width*0.8,
+                                  height: 110.0,
+                                  decoration: const BoxDecoration(
+
+                                      image: DecorationImage(
+                                          image: AssetImage('images/bb1.png'),
+                                          fit: BoxFit.fill
+                                      )
+                                  ),
+
+                                ),
+                              ],
+                            ),
+                          ),
+                          ListTile(
+                            onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=>const Afraid()));},
+                            title: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+
+                                  width:MediaQuery.of(context).size.width*0.8,
+                                  height: 105.0,
+                                  decoration: const BoxDecoration(
+
+                                      image: DecorationImage(
+                                          image: AssetImage('images/bb2.png'),
+                                          fit: BoxFit.fill
+                                      )
+                                  ),
+
+                                ),
+                              ],
+                            ),
+                          ),
+                          ListTile(
+                            onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=>const ApproveOf()));},
+                            title: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+
+                                  width:MediaQuery.of(context).size.width*0.8,
+                                  height: 105.0,
+                                  decoration: const BoxDecoration(
+
+                                      image: DecorationImage(
+                                          image: AssetImage('images/bb3.png'),
+                                          fit: BoxFit.fill
+                                      )
+                                  ),
+
+                                ),
+                              ],
+                            ),
+                          ),
+                          ListTile(
+                            onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=>const Argue()));},
+                            title: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+
+                                  width:MediaQuery.of(context).size.width*0.8,
+                                  height: 105.0,
+                                  decoration: const BoxDecoration(
+
+                                      image: DecorationImage(
+                                          image: AssetImage('images/bb4.png'),
+                                          fit: BoxFit.fill
+                                      )
+                                  ),
+
+                                ),
+                              ],
+                            ),
+                          ),
+                          ListTile(
+                            onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=>const Ask()));},
+                            title: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+
+                                  width:MediaQuery.of(context).size.width*0.8,
+                                  height: 105.0,
+                                  decoration: const BoxDecoration(
+
+                                      image: DecorationImage(
+                                          image: AssetImage('images/bb5.png'),
+                                          fit: BoxFit.fill
+                                      )
+                                  ),
+
+                                ),
+                              ],
+                            ),
+                          ),
+                          ListTile(
+                            onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=>const Blame()));},
+                            title: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+
+                                  width:MediaQuery.of(context).size.width*0.8,
+                                  height: 105.0,
+                                  decoration: const BoxDecoration(
+
+                                      image: DecorationImage(
+                                          image: AssetImage('images/bb6.png'),
+                                          fit: BoxFit.fill
+                                      )
+                                  ),
+
+                                ),
+                              ],
+                            ),
+                          ),
+                          ListTile(
+                            onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=>Boast()));},
+                            title: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+
+                                  width:MediaQuery.of(context).size.width*0.8,
+                                  height: 105.0,
+                                  decoration: const BoxDecoration(
+
+                                      image: DecorationImage(
+                                          image: AssetImage('images/bb7.png'),
+                                          fit: BoxFit.fill
+                                      )
+                                  ),
+
+                                ),
+                              ],
+                            ),
+                          ),
+                          ListTile(
+                            onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=>Borrow()));},
+                            title: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+
+                                  width:MediaQuery.of(context).size.width*0.8,
+                                  height: 105.0,
+                                  decoration: const BoxDecoration(
+
+                                      image: DecorationImage(
+                                          image: AssetImage('images/bb8.png'),
+                                          fit: BoxFit.fill
+                                      )
+                                  ),
+
+                                ),
+                              ],
+                            ),
+                          ),
+                          ListTile(
+                            onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=>Faithful()));},
+                            title: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+
+                                  width:MediaQuery.of(context).size.width*0.8,
+                                  height: 105.0,
+                                  decoration: const BoxDecoration(
+
+                                      image: DecorationImage(
+                                          image: AssetImage('images/bb9.png'),
+                                          fit: BoxFit.fill
+                                      )
+                                  ),
+
+                                ),
+                              ],
+                            ),
+                          ),
+                          ListTile(
+                            onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=>Famous()));},
+                            title: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+
+                                  width:MediaQuery.of(context).size.width*0.8,
+                                  height: 105.0,
+                                  decoration: const BoxDecoration(
+
+                                      image: DecorationImage(
+                                          image: AssetImage('images/bb10.png'),
+                                          fit: BoxFit.fill
+                                      )
+                                  ),
+
+                                ),
+                              ],
+                            ),
+                          ),
+                          ListTile(
+                            onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=>FeelLike()));},
+                            title: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+
+                                  width:MediaQuery.of(context).size.width*0.8,
+                                  height: 105.0,
+                                  decoration: const BoxDecoration(
+
+                                      image: DecorationImage(
+                                          image: AssetImage('images/bb11.png'),
+                                          fit: BoxFit.fill
+                                      )
+                                  ),
+
+                                ),
+                              ],
+                            ),
+                          ),
+                          ListTile(
+                            onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=>GulityOf()));},
+                            title: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+
+                                  width:MediaQuery.of(context).size.width*0.8,
+                                  height: 105.0,
+                                  decoration: const BoxDecoration(
+
+                                      image: DecorationImage(
+                                          image: AssetImage('images/bb12.png'),
+                                          fit: BoxFit.fill
+                                      )
+                                  ),
+
+                                ),
+                              ],
+                            ),
+                          ),
+                          ListTile(
+                            onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=>Hasto()));},
+                            title: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+
+                                  width:MediaQuery.of(context).size.width*0.8,
+                                  height: 105.0,
+                                  decoration: const BoxDecoration(
+
+                                      image: DecorationImage(
+                                          image: AssetImage('images/bb13.png'),
+                                          fit: BoxFit.fill
+                                      )
+                                  ),
+
+                                ),
+                              ],
+                            ),
+                          ),
+                          ListTile(
+                            onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=>UsedTo()));},
+                            title: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+
+                                  width:MediaQuery.of(context).size.width*0.8,
+                                  height: 105.0,
+                                  decoration: const BoxDecoration(
+
+                                      image: DecorationImage(
+                                          image: AssetImage('images/bb20.png'),
+                                          fit: BoxFit.fill
+                                      )
+                                  ),
+
+                                ),
+                              ],
+                            ),
+                          ),
+                          ListTile(
+                            onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=>InvolveIn()));},
+                            title: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+
+                                  width:MediaQuery.of(context).size.width*0.8,
+                                  height: 105.0,
+                                  decoration: const BoxDecoration(
+
+                                      image: DecorationImage(
+                                          image: AssetImage('images/bb15.png'),
+                                          fit: BoxFit.fill
+                                      )
+                                  ),
+
+                                ),
+                              ],
+                            ),
+                          ),
+                          ListTile(
+                            onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=>MarriedTo()));},
+                            title: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+
+                                  width:MediaQuery.of(context).size.width*0.8,
+                                  height: 105.0,
+                                  decoration: const BoxDecoration(
+
+                                      image: DecorationImage(
+                                          image: AssetImage('images/bb16.png'),
+                                          fit: BoxFit.fill
+                                      )
+                                  ),
+
+                                ),
+                              ],
+                            ),
+                          ),
+                          ListTile(
+                            onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=>NoPointIn()));},
+                            title: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+
+                                  width:MediaQuery.of(context).size.width*0.8,
+                                  height: 105.0,
+                                  decoration: const BoxDecoration(
+
+                                      image: DecorationImage(
+                                          image: AssetImage('images/bb17.png'),
+                                          fit: BoxFit.fill
+                                      )
+                                  ),
+
+                                ),
+                              ],
+                            ),
+                          ),
+                          ListTile(
+                            onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=>ResponsibleFor()));},
+                            title: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+
+                                  width:MediaQuery.of(context).size.width*0.8,
+                                  height: 105.0,
+                                  decoration: const BoxDecoration(
+
+                                      image: DecorationImage(
+                                          image: AssetImage('images/bb18.png'),
+                                          fit: BoxFit.fill
+                                      )
+                                  ),
+
+                                ),
+                              ],
+                            ),
+                          ),
+                          ListTile(
+                            onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=>TiredOf()));},
+                            title: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+
+                                  width:MediaQuery.of(context).size.width*0.8,
+                                  height: 105.0,
+                                  decoration: const BoxDecoration(
+
+                                      image: DecorationImage(
+                                          image: AssetImage('images/bb19.png'),
+                                          fit: BoxFit.fill
+                                      )
+                                  ),
+
+                                ),
+                              ],
+                            ),
+                          ),
+                          ListTile(
+                            onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=>HaveAnIntention()));},
+                            title: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+
+                                  width:MediaQuery.of(context).size.width*0.8,
+                                  height: 105.0,
+                                  decoration: const BoxDecoration(
+
+                                      image: DecorationImage(
+                                          image: AssetImage('images/bb14.png'),
+                                          fit: BoxFit.fill
+                                      )
+                                  ),
+
+                                ),
+                              ],
+                            ),
+                          ),
+
+
+
+                        ],
+                      )
+                  ),
+
+
+
+
+                )
+            ),
+          ],
+        ),
+
     );
+
   }
 }
