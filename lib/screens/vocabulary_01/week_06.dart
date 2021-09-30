@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:speaking_booster/home_page.dart';
+import 'package:speaking_booster/screens/vocabulary_01/vocabulary_home.dart';
 class Week_06 extends StatefulWidget {
   const Week_06({Key? key}) : super(key: key);
 
@@ -27,6 +29,20 @@ class _Week_06State extends State<Week_06> {
               )
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+            },
+            icon: Icon(Icons.home),
+          )
+        ],
+        leading:IconButton(
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>VacabularyHome_01()));
+          },
+          icon: Icon(Icons.arrow_back),
+        ) ,
       ),
       body: ListView(
         children: const [

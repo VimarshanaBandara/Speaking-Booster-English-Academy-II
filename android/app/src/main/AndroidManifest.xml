@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.spokenenglishvmm.speaking_booster">
    <application
-        android:label="speaking_booster"
+        android:label="Speaking Booster"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

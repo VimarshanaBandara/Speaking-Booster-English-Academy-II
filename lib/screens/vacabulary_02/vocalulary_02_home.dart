@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:speaking_booster/home_page.dart';
 import 'package:speaking_booster/screens/functions/functions_home.dart';
 import 'package:speaking_booster/screens/phrases/phrases_01.dart';
 import 'package:speaking_booster/screens/speaking_booster_01.dart';
@@ -32,6 +33,12 @@ class VacabularyHome_02 extends StatelessWidget {
           backgroundColor: Colors.orangeAccent,//Color(0xFF00897B),
           elevation: 0.0,
           //centerTitle: true,
+          leading:IconButton(
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+            },
+            icon: Icon(Icons.arrow_back),
+          ) ,
         ),
 
         body: Column(

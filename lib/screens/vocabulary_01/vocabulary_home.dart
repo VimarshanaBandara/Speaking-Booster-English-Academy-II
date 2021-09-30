@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:speaking_booster/home_page.dart';
 import 'package:speaking_booster/screens/vocabulary_01/week_01.dart';
 import 'package:speaking_booster/screens/vocabulary_01/week_02.dart';
 import 'package:speaking_booster/screens/vocabulary_01/week_03.dart';
@@ -25,6 +26,12 @@ class VacabularyHome_01 extends StatelessWidget {
         title:  Text('Vocabulary 01',style:GoogleFonts.lobster(fontSize: 35.0),),
         backgroundColor: Colors.orangeAccent,//Color(0xFF00897B),
         elevation: 0.0,
+        leading:IconButton(
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+          },
+          icon: Icon(Icons.arrow_back),
+        ) ,
         //centerTitle: true,
       ),
 

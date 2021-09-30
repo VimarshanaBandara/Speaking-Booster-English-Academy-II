@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:speaking_booster/screens/en.dart';
 import 'package:speaking_booster/screens/functions/functions_home.dart';
 import 'package:speaking_booster/screens/phrases/phrases_01.dart';
+import 'package:speaking_booster/screens/phrases/phrases_02.dart';
 import 'package:speaking_booster/screens/privacy_screen.dart';
 import 'package:speaking_booster/screens/speaking_booster_01.dart';
 import 'package:speaking_booster/screens/speaking_booster_03.dart';
@@ -129,7 +130,7 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       ListTile(
-                        onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=>const Phrases01()));},
+                        onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=>const Phrases02()));},
                         title: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
